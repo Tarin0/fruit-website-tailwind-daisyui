@@ -37,8 +37,7 @@
 <body class="font-lato">
   <header>
     <!-- nav section starts here  -->
-    <nav
-      class="lg:flex gap-12 px-3 py-3 my-8 w-4/5 text-white mx-auto justify-center items-center rounded-full bg-red-500">
+    <nav class="lg:flex gap-12 lg:px-3 lg:py-3 my-8 w-4/5 text-white mx-auto justify-center items-center lg:rounded-full bg-red-500">
       <div>
         <ul class="flex gap-8 flex-1 font-medium">
           <li>Home</li>
@@ -51,11 +50,10 @@
         <img src="images/logo.png" alt="">
         <h3 class="font-bold  text-white text-4xl">Fruit Burst</h3>
       </div>
-      <div class="flex-1">
+      <div class="hidden lg:flex-1">
         <div class="relative">
           <input type="text" placeholder="Search here" class="input text-black rounded-full w-full max-w-xs pr-10" />
           <div class="absolute inset-y-0 right-0 flex items-center pr-8 pointer-events-none">
-            <!-- Font Awesome Icon -->
             <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
           </div>
         </div>
@@ -66,16 +64,16 @@
   <main>
     <!-- slider section  -->
     <section>
-      <div class="relative">
-        <div class="w-4/5 flex mx-auto">
-          <div class="carousel h-96 w-full ">
+      <div class="lg:relative">
+        <div class="w-4/5 sm:3/5 flex mx-auto">
+          <div class="carousel h-96 sm:h-80 w-full ">
             <!-- slider-1  -->
             <div id="slide1" class="carousel-item relative w-full">
               <div class="hero" style="background-image: url(images/banner1.png);">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-center text-white">
                   <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
+                    <h1 class="mb-5 sm:text-3xl lg:text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
                     <p class="mb-5">We supply highly quality organic products</p>
                     <button class="btn text-white border-none bg-primary-color">Shop Now</button>
                   </div>
@@ -143,10 +141,9 @@
             </div>
 
           </div>
-          <!-- </div> -->
         </div>
       </div>
-      <div class="grid grid-cols-5 gap-4 rounded-lg w-3/5 mb-5 mx-auto bg-white absolute left-64 bottom-10">
+      <div class="hidden lg:grid grid-cols-5 gap-4 rounded-lg w-3/5 mb-5 mx-auto bg-white lg:absolute left-64 bottom-10">
         <div class="card">
           <figure><img src="/images/fruit1.png" alt="" /></figure>
           <p class="text-white-400 text-center">Grape</p>
@@ -170,34 +167,34 @@
       </div>
     </section>
     <!-- deal section starts here  mt-75 pt-50 py-10 -->
-    <section class="mt-24 pt-10 flex content-between w-4/5 mx-auto">
-      <div class="flex-1">
-        <h4 class="text-5xl mb-4 font-extrabold ">Deal of the day</h4>
+    <section class="sm:mt-10 lg:mt-24 pt-10 lg:flex lg:content-between w-4/5 mx-auto">
+      <div class="lg:flex-1 sm:text-center">
+        <h4 class="text-2xl lg:text-5xl mb-4 font-extrabold text-center">Deal of the day</h4>
         <p class="font-medium text-gray-500">Contrary to popular belief, is not simply random text. It has roots in a
-          piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
+          piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
       </div>
-      <div class="flex-none">
+      <div class="lg:flex-none sm:ml-12">
         <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
           <div class="flex flex-col font-bold">
-            <span class="countdown font-mono text-5xl">
+            <span class="countdown font-mono text-2xl lg:text-5xl">
               <span style="--value:15;"></span>:
             </span>
             Days
           </div>
           <div class="flex flex-col font-bold">
-            <span class="countdown font-mono text-5xl">
+            <span class="countdown font-mono text-2xl lg:text-5xl">
               <span style="--value:10;"></span>:
             </span>
             Hours
           </div>
           <div class="flex flex-col font-bold">
-            <span class="countdown font-mono text-5xl">
+            <span class="countdown font-mono text-2xl lg:text-5xl">
               <span style="--value:24;"></span>:
             </span>
             Minutes
           </div>
           <div class="flex flex-col font-bold">
-            <span class="countdown font-mono text-5xl">
+            <span class="countdown font-mono text-2xl lg:text-5xl">
               <span style="--value:34;"></span>
             </span>
             Seconds
@@ -209,11 +206,11 @@
     <!-- card section starts here  -->
 
     <section class="py-10 mx-auto justify-center w-4/5">
-      <div class="grid grid-cols-4 gap-4 w-full">
+      <div class="grid  gap-4 w-full grid-cols-1 lg:grid-cols-4">
         <div class="card bg-base-100 border rounded-lg">
           <figure><img src="/images/fruit6.png" alt="" /></figure>
           <div class="card-body">
-            <h2 class="card-title ml-11">12.90$ - 18.85$</h2>
+            <h2 class="card-title lg:ml-11 sm:ml-4">12.90$ - 18.85$</h2>
             <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700">
             <p class="text-gray-500 text-center">Apples</p>
             <div class="rating rating-lg rating-half flex justify-center">
@@ -231,7 +228,7 @@
             </div>
           </div>
           <!-- Open the modal using ID.showModal() method -->
-          <button class="mb-8 text-primary-color font-bold border-none" onclick="my_modal_5.showModal()">
+          <button class="mb-8 text-primary-color font-bold border-none" onclick="lg:my_modal_5.showModal()">
             Details</button>
           <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
             <form method="dialog" class="modal-box">
@@ -430,14 +427,14 @@
         <div class="hero-overlay bg-opacity-60"></div>
         <div class="hero-content text-center text-neutral-content">
           <div class="text-white pt-20">
-            <h1 class="mb-5 text-5xl font-extrabold">Meet the team section</h1>
+            <h1 class="mb-5 text-2xl lg:text-5xl font-extrabold">Meet the team section</h1>
             <p class="mb-5 text-white-300">Contrary to popular belief, is not simply random text. It has roots in a
-              piece of classical <br>Latin literature from 45 BC, making it over 2000 years old.</p>
-            <div class="grid grid-cols-4 gap-4">
+              piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 ">
               <div class="card">
                 <figure><img src="/images/member1.png" alt="" /></figure>
                 <div class="card-body">
-                  <h2 class="card-title ml-5 font-extrabold">Awlad Hossain</h2>
+                  <h2 class="flex mx-auto pl-5 lg:ml-5 font-extrabold">Awlad Hossain</h2>
                   <p class="text-white-400 text-center">Fruits Expert</p>
                   <div class="footer-icons flex gap-3 mx-auto">
                     <span>
@@ -456,7 +453,7 @@
               <div class="card">
                 <figure><img src="/images/member2.png" alt="" /></figure>
                 <div class="card-body">
-                  <h2 class="card-title ml-5 font-extrabold">Safia Chowdhury</h2>
+                  <h2 class="flex mx-auto pl-5 lg:ml-5 font-extrabold">Safia Chowdhury</h2>
                   <p class="text-white-400 text-center">Fruits Expert</p>
                   <div class="footer-icons flex gap-3 mx-auto">
                     <span>
@@ -475,7 +472,7 @@
               <div class="card">
                 <figure><img src="/images/member3.png" alt="" /></figure>
                 <div class="card-body">
-                  <h2 class="card-title ml-5 font-extrabold">Rokib Hossain</h2>
+                  <h2 class="flex mx-auto pl-5 lg:ml-5 font-extrabold">Rokib Hossain</h2>
                   <p class="text-white-400 text-center">Fruits Expert</p>
                   <div class="footer-icons flex gap-3 mx-auto">
                     <span>
@@ -494,7 +491,7 @@
               <div class="card">
                 <figure><img src="/images/member4.png" alt="" /></figure>
                 <div class="card-body">
-                  <h2 class="card-title ml-12 font-extrabold">Chaity</h2>
+                  <h2 class="flex mx-auto pl-4 lg:ml-12 font-extrabold">Chaity</h2>
                   <p class="text-white-400 text-center">Fruits Expert</p>
                   <div class="footer-icons flex gap-3 mx-auto">
                     <span>
@@ -519,11 +516,11 @@
     <!-- why you choose section  -->
     <section class="w-4/5 py-10 mx-auto justify-center">
       <div class="my-20 text-center">
-        <h4 class="text-5xl mb-4 font-extrabold ">Why Choose Us</h4>
+        <h4 class="text-2xl lg:text-5xl mb-4 font-extrabold ">Why Choose Us</h4>
         <p class="font-medium text-gray-500">Contrary to popular belief, is not simply random text. It has roots in a
-          piece of classical <br>Latin literature from 45 BC, making it over 2000 years old.</p>
+          piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
       </div>
-      <div class="grid grid-cols-3 gap-4 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
         <div>
           <div class="flex gap-5">
 
@@ -597,7 +594,7 @@
 
             <div>
               <h2 class="text-2xl text-end">The Benefits Only</h2>
-              <hr class="h-0.5 w-32 my-3 bg-gray-200 border-0 dark:bg-black-900">
+              <hr class="ml-auto h-0.5 w-32 my-3 bg-gray-200 border-0 dark:bg-black-900">
               <p class="text-gray-500 text-end pb-3">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
             </div>
             <div class="w-12 h-10 bg-gray-600 rounded-3xl text-center text-white">
